@@ -32,7 +32,18 @@ public:
 	virtual ~Position();
 
 	float get_x() {return x;};
-	float get_y() {return y;};
+	float get_y()
+	{
+		if (y < 0)
+		{
+			is_left_ = true;
+		}
+		else if (y > 0)
+		{
+			is_right_ = true;
+		}
+		return y;
+	};
 	float get_z() {return z;};
 
 	void set_x(float _x) {x = _x;};
@@ -44,6 +55,8 @@ public:
 
 private:
 		float x, y, z;
+		bool is_right_;
+		bool is_left_;
 
 };
 

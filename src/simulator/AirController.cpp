@@ -30,7 +30,6 @@
 
 AirController::AirController() {
 	// TODO Auto-generated constructor stub
-
 }
 
 AirController::~AirController() {
@@ -40,34 +39,100 @@ AirController::~AirController() {
 void
 AirController::doWork()
 {
-			std::list<Flight*> flights = Airport::getInstance()->getFlights();
-			std::list<Flight*>::iterator it;
+	std::list<Flight*> flights = Airport::getInstance()->getFlights();
+	std::list<Flight*>::iterator it;
 
-			Position pos0(3500.0, 0.0, 100.0);
-			Position pos1(1500.0, 0.0, 50.0);
-			Position pos2(200.0, 0.0, 25.0);
-			Position pos3(-750.0, 0.0, 25.0);
+	Position circuitoi0(8000.0, -10000.0, 1000.0);
+	Position circuitoi1(8000.0, -7000.0, 1000.0);
+	Position circuitoi2(5000.0, -10000.0, 1000.0);
+	Position circuitoi3(5000.0, -7000.0, 1000.0);
 
-			Route r0, r1, r2, r3;
+	Position circuitod0(8000.0, 10000.0, 1000.0);
+	Position circuitod1(8000.0, 7000.0, 1000.0);
+	Position circuitod2(5000.0, 10000.0, 1000.0);
+	Position circuitod3(5000.0, 7000.0, 1000.0);
 
-			r0.pos = pos0;
-			r0.speed = 500.0;
-			r1.pos = pos1;
-			r1.speed = 100.0;
-			r2.pos = pos2;
-			r2.speed = 19.0;
-			r3.pos = pos3;
-			r3.speed = 15.0;
+	Position pos_aterrizaje_0(3500.0, 0.0, 100.0);
+	Position pos_aterrizaje_1(1500.0, 0.0, 50.0);
+	Position pos_aterrizaje_2(200.0, 0.0, 25.0);
+	Position pos_aterrizaje_3(-750.0, 0.0, 25.0);
 
-			for(it = flights.begin(); it!=flights.end(); ++it)
+	Route ra0, ra1, ra2, ra3;
+	Route rci0, rci1, rci2, rci3; //rutas de circuito
+	Route rcd0, rcd1, rcd2, rcd3;
+
+	ra0.pos = pos_aterrizaje_0;
+	ra0.speed = 200.0;
+	ra1.pos = pos_aterrizaje_1;
+	ra1.speed = 100.0;
+	ra2.pos = pos_aterrizaje_2;
+	ra2.speed = 19.0;
+	ra3.pos = pos_aterrizaje_3;
+	ra3.speed = 15.0;
+
+	rcd0.pos = circuitod0;
+	rcd0.speed = 250.0;
+	rcd1.pos = circuitod1;
+	rcd1.speed = 250.0;
+	rcd2.pos = circuitod2;
+	rcd2.speed = 250.0;
+	rcd3.pos = circuitod3;
+	rcd3.speed = 250.0;
+
+	rci0.pos = circuitoi0;
+	rci0.speed = 250.0;
+	rci1.pos = circuitoi1;
+	rci1.speed = 250.0;
+	rci2.pos = circuitoi2;
+	rci2.speed = 250.0;
+	rci3.pos = circuitoi3;
+	rci3.speed = 250.0;
+
+	if(!Airport::getInstance()-> is_booked_landing())
+	{
+		Flight* primero = *(flights.begin());
+
+		primero -> getRoute() -> clear();
+	}
+
+	for(it = flights.begin(); it!=flights.end(); ++it)
+	{
+		if((*it)->getRoute()->empty())
+		{
+			/*(*it)->getRoute()->push_back(r3);
+			(*it)->getRoute()->push_front(r2);
+			(*it)->getRoute()->push_front(r1);
+			(*it)->getRoute()->push_front(r0);*/
+			if((Airport::getInstance() -> is_booked_landing()) && ((*it) -> getPosition().get_y() < 0))
 			{
-				if((*it)->getRoute()->empty())
-				{
-					(*it)->getRoute()->push_back(r3);
-					(*it)->getRoute()->push_front(r2);
-					(*it)->getRoute()->push_front(r1);
-					(*it)->getRoute()->push_front(r0);
-				}
+				(*it)->getRoute()->push_back(rci3);
+				(*it)->getRoute()->push_front(rci2);
+				(*it)->getRoute()->push_front(rci1);
+				(*it)->getRoute()->push_front(rci0);
 			}
-
+			else
+			{
+				Airport::getInstance() -> book_landing();
+				(*it)->getRoute()->push_back(ra3);
+				(*it)->getRoute()->push_front(ra2);
+				(*it)->getRoute()->push_front(ra1);
+				(*it)->getRoute()->push_front(ra0);
+			}
+			if(Airport::getInstance() -> is_booked_landing() && ((*it) -> getPosition().get_y() > 0))
+			{
+				(*it)->getRoute()->push_back(rcd3);
+				(*it)->getRoute()->push_front(rcd2);
+				(*it)->getRoute()->push_front(rcd1);
+				(*it)->getRoute()->push_front(rcd0);
+			}
+			else
+			{
+				Airport::getInstance()-> book_landing();
+				(*it)->getRoute()->push_back(ra3);
+				(*it)->getRoute()->push_front(ra2);
+				(*it)->getRoute()->push_front(ra1);
+				(*it)->getRoute()->push_front(ra0);
+			}
+		}
+	}
 }

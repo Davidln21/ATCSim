@@ -33,6 +33,7 @@ public:
 	virtual ~AirController();
 
 	void doWork();
+
 };
 
 #endif /* AIRCONTROLLER_H_ */

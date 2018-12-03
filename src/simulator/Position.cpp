@@ -28,6 +28,7 @@
 Position::Position() {
 
 	x = y = z = 0.0;
+	is_left_ = is_right_ = false;
 
 }
 
