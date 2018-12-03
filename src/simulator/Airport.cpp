@@ -58,7 +58,7 @@ Airport::Airport() {
 
 	pthread_mutex_init(&mutex, NULL);
 
-  any_landing_ = false;
+	any_landing_ = false;
 }
 
 Airport::~Airport() {
