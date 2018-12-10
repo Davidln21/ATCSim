@@ -25,6 +25,8 @@
 #ifndef POSITION_H_
 #define POSITION_H_
 
+namespace atcsim{
+
 class Position {
 public:
 	Position();
@@ -48,5 +50,7 @@ private:
 		bool is_left_;
 
 };
+
+};  // namespace atcsim
 
 #endif /* POSITION_H_ */

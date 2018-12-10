@@ -28,6 +28,8 @@
 #include "Position.h"
 #include <list>
 
+namespace atcsim{
+
 AirController::AirController() {
 	// TODO Auto-generated constructor stub
 }
@@ -462,3 +464,5 @@ AirController::doWork()
 		}
 	}
 }
+
+};  // namespace atcsim
