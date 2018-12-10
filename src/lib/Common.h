@@ -45,7 +45,7 @@
 
 
 #define AIRPORT_DISTANCE_MAX 	20000.0f
-#define FLIGHT_HEIGHT	 		2000.0f
+#define FLIGHT_HEIGHT	 		3500.0f
 #define LANDING_STRIP_L	 		750.0f
 #define LANDING_STRIP_W	 		80.0f
 
