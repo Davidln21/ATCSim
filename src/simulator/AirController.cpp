@@ -45,18 +45,18 @@ AirController::doWork()
 	std::list<Flight*>::iterator it;
 
 	//Puntos que definen un circuito hexagonal en sentido horario en el cuadrante central izquierdo.
-	Position circuitoizq1_1(15000.0, 8000.0, 3500.0);
-	Position circuitoizq1_2(13500.0, 5000.0, 3500.0);
-	Position circuitoizq1_3(10500.0, 5000.0, 3500.0);
-	Position circuitoizq1_4(9000.0, 8000.0, 3500.0);
-	Position circuitoizq1_5(10500.0, 11000.0, 3500.0);
-	Position circuitoizq1_6(13500.0, 11000.0, 2800.0);
-	Position circuitoizq1_7(15000.0, 8000.0, 2100.0);
-	Position circuitoizq1_8(13500.0, 5000.0, 2100.0);
-	Position circuitoizq1_9(10500.0, 5000.0, 2100.0);
-	Position circuitoizq1_10(9000.0, 8000.0, 2100.0);
-	Position circuitoizq1_11(10500.0, 11000.0, 2100.0);
-	Position circuitoizq1_12(13500.0, 11000.0, 1400.0);
+	Position circuitoizq1_1(14000.0, 8000.0, 3500.0);
+	Position circuitoizq1_2(12500.0, 5000.0, 3500.0);
+	Position circuitoizq1_3(9500.0, 5000.0, 3500.0);
+	Position circuitoizq1_4(8000.0, 8000.0, 3500.0);
+	Position circuitoizq1_5(9500.0, 11000.0, 3500.0);
+	Position circuitoizq1_6(12500.0, 11000.0, 2800.0);
+	Position circuitoizq1_7(14000.0, 8000.0, 2100.0);
+	Position circuitoizq1_8(12500.0, 5000.0, 2100.0);
+	Position circuitoizq1_9(9500.0, 5000.0, 2100.0);
+	Position circuitoizq1_10(8000.0, 8000.0, 2100.0);
+	Position circuitoizq1_11(9500.0, 11000.0, 2100.0);
+	Position circuitoizq1_12(12500.0, 11000.0, 1400.0);
 
 	//Puntos que definen un circuito hexagonal en sentido horario en el cuadrante lateral izquierdo.
 	Position circuitoizq2_1(5500.0, 16000.0, 3500.0);
@@ -73,18 +73,18 @@ AirController::doWork()
 	Position circuitoizq2_12(2500.0, 14500.0, 1400.0);
 
 	//Puntos que definen un circuito hexagonal en sentido horario en el cuadrante central derecho.
-	Position circuitoder1_1(15000.0, -8000.0, 3500.0);
-	Position circuitoder1_2(13500.0, -5000.0, 3500.0);
-	Position circuitoder1_3(10500.0, -5000.0, 3500.0);
-	Position circuitoder1_4(9000.0, -8000.0, 3500.0);
-	Position circuitoder1_5(10500.0, -11000.0, 3500.0);
-	Position circuitoder1_6(13500.0, -11000.0, 2800.0);
-	Position circuitoder1_7(15000.0, -8000.0, 2100.0);
-	Position circuitoder1_8(13500.0, -5000.0, 2100.0);
-	Position circuitoder1_9(10500.0, -5000.0, 2100.0);
-	Position circuitoder1_10(9000.0, -8000.0, 2100.0);
-	Position circuitoder1_11(10500.0, -11000.0, 2100.0);
-	Position circuitoder1_12(13500.0, -11000.0, 1400.0);
+	Position circuitoder1_1(14000.0, -8000.0, 3500.0);
+	Position circuitoder1_2(12500.0, -5000.0, 3500.0);
+	Position circuitoder1_3(9500.0, -5000.0, 3500.0);
+	Position circuitoder1_4(8000.0, -8000.0, 3500.0);
+	Position circuitoder1_5(9500.0, -11000.0, 3500.0);
+	Position circuitoder1_6(12500.0, -11000.0, 2800.0);
+	Position circuitoder1_7(14000.0, -8000.0, 2100.0);
+	Position circuitoder1_8(12500.0, -5000.0, 2100.0);
+	Position circuitoder1_9(9500.0, -5000.0, 2100.0);
+	Position circuitoder1_10(8000.0, -8000.0, 2100.0);
+	Position circuitoder1_11(9500.0, -11000.0, 2100.0);
+	Position circuitoder1_12(12500.0, -11000.0, 1400.0);
 
 	//Puntos que definen un circuito hexagonal en sentido horario en el cuadrante lateral derecho.
 	Position circuitoder2_1(5500.0, -16000.0, 3500.0);
@@ -101,11 +101,18 @@ AirController::doWork()
 	Position circuitoder2_12(2500.0, -14500.0, 1400.0);
 
 	//Puntos de control por los que pasar para aterrizar.
-	/*Position pos_aterrizajeizq_1(6000.0, 5000.0, 100.0);
-	Position pos_aterrizajeizq_2(3500.0, 10000.0, 100.0);
-	Position pos_aterrizajeder_1(6000.0, -5000.0, 100.0);
-	Position pos_aterrizajeder_2(3500.0, -10000.0, 100.0);
-*/
+	Position pos_aterrizajeizq_1_1(6000.0, 3000.0, 100.0);
+	Position pos_aterrizajeizq_1_2(3000.0, 1000.0, 300.0);
+
+	Position pos_aterrizajeizq_2_1(4000.0, 10000.0, 100.0);
+	Position pos_aterrizajeizq_2_2(2000.0, 3000.0, 300.0);
+
+	Position pos_aterrizajeder_1_1(6000.0, -3000.0, 100.0);
+	Position pos_aterrizajeder_1_2(3000.0, -1000.0, 300.0);
+
+	Position pos_aterrizajeder_2_1(4000.0, -10000.0, 100.0);
+	Position pos_aterrizajeder_2_2(2000.0, -3000.0, 300.0);
+
 	Position pos_aterrizaje_1(2500.0, 0.0, 100.0);
 	Position pos_aterrizaje_2(1000.0, 0.0, 50.0);
 	Position pos_aterrizaje_3(200.0, 0.0, 25.0);
@@ -113,11 +120,11 @@ AirController::doWork()
 
 	Route r_aterr1, r_aterr2, r_aterr3, r_aterr4;
 
-	Route r_aterr_izq1_1, r_aterr_izq1_2, r_aterr_izq1_3, r_aterr_izq1_4;
-	Route r_aterr_izq2_1, r_aterr_izq2_2, r_aterr_izq2_3, r_aterr_izq2_4;
+	Route r_aterr_izq1_1, r_aterr_izq1_2;
+	Route r_aterr_izq2_1, r_aterr_izq2_2;
 
-	Route r_aterr_der1_1, r_aterr_der1_2, r_aterr_der1_3, r_aterr_der1_4;
-	Route r_aterr_der2_1, r_aterr_der2_2, r_aterr_der2_3, r_aterr_der2_4;
+	Route r_aterr_der1_1, r_aterr_der1_2;
+	Route r_aterr_der2_1, r_aterr_der2_2;
 
 	Route r_circ_izq1_1, r_circ_izq1_2, r_circ_izq1_3, r_circ_izq1_4, r_circ_izq1_5, r_circ_izq1_6;
 	Route r_circ_izq1_7, r_circ_izq1_8, r_circ_izq1_9, r_circ_izq1_10, r_circ_izq1_11, r_circ_izq1_12;
@@ -139,43 +146,28 @@ AirController::doWork()
 	r_aterr3.speed = 40.0;
 	r_aterr4.pos = pos_aterrizaje_4;
 	r_aterr4.speed = 19.0;
-/*
-	r_aterr_izq1_1.pos = pos_aterrizajeizq_1;
+
+	r_aterr_izq1_1.pos = pos_aterrizajeizq_1_1;
+	r_aterr_izq1_1.speed = 200.0;
+	r_aterr_izq1_2.pos = pos_aterrizajeizq_1_2;
 	r_aterr_izq1_2.speed = 200.0;
-	r_aterr_izq1_2.pos = pos_aterrizaje_2;
-	r_aterr_izq1_3.speed = 100.0;
-	r_aterr_izq1_3.pos = pos_aterrizaje_3;
-	r_aterr_izq1_3.speed = 40.0;
-	r_aterr_izq1_4.pos = pos_aterrizaje_4;
-	r_aterr_izq1_4.speed = 19.0;
 
-	r_aterr_izq2_1.pos = pos_aterrizajeizq_2;
+	r_aterr_izq2_1.pos = pos_aterrizajeizq_2_1;
+	r_aterr_izq2_1.speed = 200.0;
+	r_aterr_izq2_2.pos = pos_aterrizajeizq_2_2;
 	r_aterr_izq2_2.speed = 200.0;
-	r_aterr_izq2_2.pos = pos_aterrizaje_2;
-	r_aterr_izq2_3.speed = 100.0;
-	r_aterr_izq2_3.pos = pos_aterrizaje_3;
-	r_aterr_izq2_3.speed = 40.0;
-	r_aterr_izq2_4.pos = pos_aterrizaje_4;
-	r_aterr_izq2_4.speed = 19.0;
 
-	r_aterr_der1_1.pos = pos_aterrizajeder_1;
+	r_aterr_der1_1.pos = pos_aterrizajeder_1_1;
+	r_aterr_der1_1.speed = 200.0;
+	r_aterr_der1_2.pos = pos_aterrizajeder_1_2;
 	r_aterr_der1_2.speed = 200.0;
-	r_aterr_der1_2.pos = pos_aterrizaje_2;
-	r_aterr_der1_3.speed = 100.0;
-	r_aterr_der1_3.pos = pos_aterrizaje_3;
-	r_aterr_der1_3.speed = 40.0;
-	r_aterr_der1_4.pos = pos_aterrizaje_4;
-	r_aterr_der1_4.speed = 19.0;
 
-	r_aterr_der2_1.pos = pos_aterrizajeder_2;
+	r_aterr_der2_1.pos = pos_aterrizajeder_2_1;
+	r_aterr_der2_1.speed = 200.0;
+	r_aterr_der2_2.pos = pos_aterrizajeder_2_2;
 	r_aterr_der2_2.speed = 200.0;
-	r_aterr_der2_2.pos = pos_aterrizaje_2;
-	r_aterr_der2_3.speed = 100.0;
-	r_aterr_der2_3.pos = pos_aterrizaje_3;
-	r_aterr_der2_3.speed = 40.0;
-	r_aterr_der2_4.pos = pos_aterrizaje_4;
-	r_aterr_der2_4.speed = 19.0;
-*/
+
+
 	//Circuito de espera central izquierdo.
 	r_circ_izq1_1.pos = circuitoizq1_1;
 	r_circ_izq1_1.speed = 250.0;
@@ -291,174 +283,183 @@ AirController::doWork()
 	{
 		if((*it)->getRoute()->empty())
 		{
-			if ((((*it) -> getPosition().get_y()) > 0) && (((*it) -> getPosition().get_y()) < ((*it) -> getPosition().get_x())))
+			if (((*it) -> getPosition().get_y() >= 0.0) && ((*it) -> getPosition().get_y()) <= (*it) -> getPosition().get_x())
 			{
 				if (Airport::getInstance() -> is_booked_landing())
 				{
-					if(((*it) -> getPosition().get_y()) > 16000)
+					if(((*it) -> getPosition().get_y()) <= 8000)
 					{
-						(*it)->getRoute()->push_back(r_circ_izq1_2);
-						(*it)->getRoute()->push_back(r_circ_izq1_3);
-						(*it)->getRoute()->push_back(r_circ_izq1_4);
-						(*it)->getRoute()->push_back(r_circ_izq1_5);
-						(*it)->getRoute()->push_back(r_circ_izq1_6);
-						(*it)->getRoute()->push_back(r_circ_izq1_7);
-						(*it)->getRoute()->push_back(r_circ_izq1_8);
-						(*it)->getRoute()->push_back(r_circ_izq1_9);
-						(*it)->getRoute()->push_back(r_circ_izq1_10);
-						(*it)->getRoute()->push_back(r_circ_izq1_11);
-						(*it)->getRoute()->push_back(r_circ_izq1_12);
+						(*it)->getRoute()->push_front(r_circ_izq1_12);
+						(*it)->getRoute()->push_front(r_circ_izq1_11);
+						(*it)->getRoute()->push_front(r_circ_izq1_10);
+						(*it)->getRoute()->push_front(r_circ_izq1_9);
+						(*it)->getRoute()->push_front(r_circ_izq1_8);
+						(*it)->getRoute()->push_front(r_circ_izq1_7);
+						(*it)->getRoute()->push_front(r_circ_izq1_6);
+						(*it)->getRoute()->push_front(r_circ_izq1_5);
+						(*it)->getRoute()->push_front(r_circ_izq1_4);
+						(*it)->getRoute()->push_front(r_circ_izq1_3);
+						(*it)->getRoute()->push_front(r_circ_izq1_2);
 					}
 					else
 					{
-						(*it)->getRoute()->push_back(r_circ_izq1_1);
-						(*it)->getRoute()->push_back(r_circ_izq1_2);
-						(*it)->getRoute()->push_back(r_circ_izq1_3);
-						(*it)->getRoute()->push_back(r_circ_izq1_4);
-						(*it)->getRoute()->push_back(r_circ_izq1_5);
-						(*it)->getRoute()->push_back(r_circ_izq1_6);
-						(*it)->getRoute()->push_back(r_circ_izq1_7);
-						(*it)->getRoute()->push_back(r_circ_izq1_8);
-						(*it)->getRoute()->push_back(r_circ_izq1_9);
-						(*it)->getRoute()->push_back(r_circ_izq1_10);
-						(*it)->getRoute()->push_back(r_circ_izq1_11);
-						(*it)->getRoute()->push_back(r_circ_izq1_12);
+						(*it)->getRoute()->push_front(r_circ_izq1_12);
+						(*it)->getRoute()->push_front(r_circ_izq1_11);
+						(*it)->getRoute()->push_front(r_circ_izq1_10);
+						(*it)->getRoute()->push_front(r_circ_izq1_9);
+						(*it)->getRoute()->push_front(r_circ_izq1_8);
+						(*it)->getRoute()->push_front(r_circ_izq1_7);
+						(*it)->getRoute()->push_front(r_circ_izq1_6);
+						(*it)->getRoute()->push_front(r_circ_izq1_5);
+						(*it)->getRoute()->push_front(r_circ_izq1_4);
+						(*it)->getRoute()->push_front(r_circ_izq1_3);
+						(*it)->getRoute()->push_front(r_circ_izq1_2);
+						(*it)->getRoute()->push_front(r_circ_izq1_1);
 					}
 				}
 				else
 				{
 					Airport::getInstance() -> book_landing();
-					(*it)->getRoute()->push_back(r_aterr1);
-					(*it)->getRoute()->push_back(r_aterr2);
-					(*it)->getRoute()->push_back(r_aterr3);
-					(*it)->getRoute()->push_back(r_aterr4);
+					(*it)->getRoute()->push_front(r_aterr4);
+					(*it)->getRoute()->push_front(r_aterr3);
+					(*it)->getRoute()->push_front(r_aterr2);
+					(*it)->getRoute()->push_front(r_aterr_izq1_2);
+					(*it)->getRoute()->push_front(r_aterr_izq1_1);
 				}
 			}
-			else if ((((*it) -> getPosition().get_y()) > 0) && (((*it) -> getPosition().get_y()) > ((*it) -> getPosition().get_x())))
+			else if (((*it) -> getPosition().get_y() >= 0.0) && ((*it) -> getPosition().get_y()) >= (*it) -> getPosition().get_x())
 			{
 				if (Airport::getInstance() -> is_booked_landing())
 				{
-					if(((*it) -> getPosition().get_x()) < 5500)
+					if(((*it) -> getPosition().get_x()) >= 5500)
 					{
-						(*it)->getRoute()->push_back(r_circ_izq2_1);
-						(*it)->getRoute()->push_back(r_circ_izq2_2);
-						(*it)->getRoute()->push_back(r_circ_izq2_3);
-						(*it)->getRoute()->push_back(r_circ_izq2_4);
-						(*it)->getRoute()->push_back(r_circ_izq2_5);
-						(*it)->getRoute()->push_back(r_circ_izq2_6);
-						(*it)->getRoute()->push_back(r_circ_izq2_7);
-						(*it)->getRoute()->push_back(r_circ_izq2_8);
-						(*it)->getRoute()->push_back(r_circ_izq2_9);
-						(*it)->getRoute()->push_back(r_circ_izq2_10);
-						(*it)->getRoute()->push_back(r_circ_izq2_11);
-						(*it)->getRoute()->push_back(r_circ_izq2_12);
+						(*it)->getRoute()->push_front(r_circ_izq2_12);
+						(*it)->getRoute()->push_front(r_circ_izq2_11);
+						(*it)->getRoute()->push_front(r_circ_izq2_10);
+						(*it)->getRoute()->push_front(r_circ_izq2_9);
+						(*it)->getRoute()->push_front(r_circ_izq2_8);
+						(*it)->getRoute()->push_front(r_circ_izq2_7);
+						(*it)->getRoute()->push_front(r_circ_izq2_6);
+						(*it)->getRoute()->push_front(r_circ_izq2_5);
+						(*it)->getRoute()->push_front(r_circ_izq2_4);
+						(*it)->getRoute()->push_front(r_circ_izq2_3);
+						(*it)->getRoute()->push_front(r_circ_izq2_2);
 					}
 					else
 					{
-						(*it)->getRoute()->push_back(r_circ_izq2_2);
-						(*it)->getRoute()->push_back(r_circ_izq2_3);
-						(*it)->getRoute()->push_back(r_circ_izq2_4);
-						(*it)->getRoute()->push_back(r_circ_izq2_5);
-						(*it)->getRoute()->push_back(r_circ_izq2_6);
-						(*it)->getRoute()->push_back(r_circ_izq2_7);
-						(*it)->getRoute()->push_back(r_circ_izq2_8);
-						(*it)->getRoute()->push_back(r_circ_izq2_9);
-						(*it)->getRoute()->push_back(r_circ_izq2_10);
-						(*it)->getRoute()->push_back(r_circ_izq2_11);
-						(*it)->getRoute()->push_back(r_circ_izq2_12);
+						(*it)->getRoute()->push_front(r_circ_izq2_12);
+						(*it)->getRoute()->push_front(r_circ_izq2_11);
+						(*it)->getRoute()->push_front(r_circ_izq2_10);
+						(*it)->getRoute()->push_front(r_circ_izq2_9);
+						(*it)->getRoute()->push_front(r_circ_izq2_8);
+						(*it)->getRoute()->push_front(r_circ_izq2_7);
+						(*it)->getRoute()->push_front(r_circ_izq2_6);
+						(*it)->getRoute()->push_front(r_circ_izq2_5);
+						(*it)->getRoute()->push_front(r_circ_izq2_4);
+						(*it)->getRoute()->push_front(r_circ_izq2_3);
+						(*it)->getRoute()->push_front(r_circ_izq2_2);
+						(*it)->getRoute()->push_front(r_circ_izq2_1);
 					}
 				}
 				else
 				{
 					Airport::getInstance() -> book_landing();
-					(*it)->getRoute()->push_back(r_aterr1);
-					(*it)->getRoute()->push_back(r_aterr2);
-					(*it)->getRoute()->push_back(r_aterr3);
-					(*it)->getRoute()->push_back(r_aterr4);
+					(*it)->getRoute()->push_front(r_aterr4);
+					(*it)->getRoute()->push_front(r_aterr3);
+					(*it)->getRoute()->push_front(r_aterr2);
+					(*it)->getRoute()->push_front(r_aterr_izq2_2);
+					(*it)->getRoute()->push_front(r_aterr_izq2_1);
 				}
 			}
-			else if ((((*it) -> getPosition().get_y()) < 0) && (abs(((*it) -> getPosition().get_y())) > ((*it) -> getPosition().get_x())))
+			else
 			{
-				if (Airport::getInstance() -> is_booked_landing())
+				if (((*it) -> getPosition().get_y() <= 0.0) && (fabs((*it) -> getPosition().get_y()) <= (*it) -> getPosition().get_x()))
 				{
-					if (abs(((*it) -> getPosition().get_y())) > 16000)
+					if (Airport::getInstance() -> is_booked_landing())
 					{
-						(*it)->getRoute()->push_back(r_circ_der1_2);
-						(*it)->getRoute()->push_back(r_circ_der1_3);
-						(*it)->getRoute()->push_back(r_circ_der1_4);
-						(*it)->getRoute()->push_back(r_circ_der1_5);
-						(*it)->getRoute()->push_back(r_circ_der1_6);
-						(*it)->getRoute()->push_back(r_circ_der1_7);
-						(*it)->getRoute()->push_back(r_circ_der1_8);
-						(*it)->getRoute()->push_back(r_circ_der1_9);
-						(*it)->getRoute()->push_back(r_circ_der1_10);
-						(*it)->getRoute()->push_back(r_circ_der1_11);
-						(*it)->getRoute()->push_back(r_circ_der1_12);
+						if (fabs(((*it) -> getPosition().get_y())) >= 8000)
+						{
+							(*it)->getRoute()->push_front(r_circ_der1_12);
+							(*it)->getRoute()->push_front(r_circ_der1_11);
+							(*it)->getRoute()->push_front(r_circ_der1_10);
+							(*it)->getRoute()->push_front(r_circ_der1_9);
+							(*it)->getRoute()->push_front(r_circ_der1_8);
+							(*it)->getRoute()->push_front(r_circ_der1_7);
+							(*it)->getRoute()->push_front(r_circ_der1_6);
+							(*it)->getRoute()->push_front(r_circ_der1_5);
+							(*it)->getRoute()->push_front(r_circ_der1_4);
+							(*it)->getRoute()->push_front(r_circ_der1_3);
+							(*it)->getRoute()->push_front(r_circ_der1_2);
+							(*it)->getRoute()->push_front(r_circ_der1_1);
+						}
+						else
+						{
+							(*it)->getRoute()->push_front(r_circ_der1_12);
+							(*it)->getRoute()->push_front(r_circ_der1_11);
+							(*it)->getRoute()->push_front(r_circ_der1_10);
+							(*it)->getRoute()->push_front(r_circ_der1_9);
+							(*it)->getRoute()->push_front(r_circ_der1_8);
+							(*it)->getRoute()->push_front(r_circ_der1_7);
+							(*it)->getRoute()->push_front(r_circ_der1_6);
+							(*it)->getRoute()->push_front(r_circ_der1_5);
+							(*it)->getRoute()->push_front(r_circ_der1_4);
+							(*it)->getRoute()->push_front(r_circ_der1_3);
+							(*it)->getRoute()->push_front(r_circ_der1_2);
+						}
 					}
 					else
 					{
-						(*it)->getRoute()->push_back(r_circ_der1_1);
-						(*it)->getRoute()->push_back(r_circ_der1_3);
-						(*it)->getRoute()->push_back(r_circ_der1_4);
-						(*it)->getRoute()->push_back(r_circ_der1_5);
-						(*it)->getRoute()->push_back(r_circ_der1_6);
-						(*it)->getRoute()->push_back(r_circ_der1_7);
-						(*it)->getRoute()->push_back(r_circ_der1_8);
-						(*it)->getRoute()->push_back(r_circ_der1_9);
-						(*it)->getRoute()->push_back(r_circ_der1_10);
-						(*it)->getRoute()->push_back(r_circ_der1_11);
-						(*it)->getRoute()->push_back(r_circ_der1_12);
+						Airport::getInstance()-> book_landing();
+						(*it)->getRoute()->push_front(r_aterr4);
+						(*it)->getRoute()->push_front(r_aterr3);
+						(*it)->getRoute()->push_front(r_aterr2);
+						(*it)->getRoute()->push_front(r_aterr_der1_2);
+						(*it)->getRoute()->push_front(r_aterr_der1_1);
 					}
 				}
-				else
+				else if (((*it) -> getPosition().get_y() <= 0.0) && (fabs((*it) -> getPosition().get_y()) >= (*it) -> getPosition().get_x()))
 				{
-					Airport::getInstance()-> book_landing();
-					(*it)->getRoute()->push_back(r_aterr1);
-					(*it)->getRoute()->push_back(r_aterr2);
-					(*it)->getRoute()->push_back(r_aterr3);
-					(*it)->getRoute()->push_back(r_aterr4);
-				}
-			}
-			else if ((((*it) -> getPosition().get_y()) < 0) && (abs((*it) -> getPosition().get_y()) < ((*it) -> getPosition().get_x())))
-			{
-				if (Airport::getInstance() -> is_booked_landing())
-				{
-					if(((*it) -> getPosition().get_x()) > 5500)
+					if (Airport::getInstance() -> is_booked_landing())
 					{
-						(*it)->getRoute()->push_back(r_circ_der2_2);
-						(*it)->getRoute()->push_back(r_circ_der2_3);
-						(*it)->getRoute()->push_back(r_circ_der2_4);
-						(*it)->getRoute()->push_back(r_circ_der2_5);
-						(*it)->getRoute()->push_back(r_circ_der2_6);
-						(*it)->getRoute()->push_back(r_circ_der2_7);
-						(*it)->getRoute()->push_back(r_circ_der2_8);
-						(*it)->getRoute()->push_back(r_circ_der2_9);
-						(*it)->getRoute()->push_back(r_circ_der2_10);
-						(*it)->getRoute()->push_back(r_circ_der2_11);
-						(*it)->getRoute()->push_back(r_circ_der2_12);
+						if(((*it) -> getPosition().get_x()) <= 5000)
+						{
+							(*it)->getRoute()->push_front(r_circ_der2_12);
+							(*it)->getRoute()->push_front(r_circ_der2_11);
+							(*it)->getRoute()->push_front(r_circ_der2_10);
+							(*it)->getRoute()->push_front(r_circ_der2_9);
+							(*it)->getRoute()->push_front(r_circ_der2_8);
+							(*it)->getRoute()->push_front(r_circ_der2_7);
+							(*it)->getRoute()->push_front(r_circ_der2_6);
+							(*it)->getRoute()->push_front(r_circ_der2_5);
+							(*it)->getRoute()->push_front(r_circ_der2_4);
+							(*it)->getRoute()->push_front(r_circ_der2_3);
+							(*it)->getRoute()->push_front(r_circ_der2_2);
+							(*it)->getRoute()->push_front(r_circ_der2_1);
+						}
+						else
+						{
+							(*it)->getRoute()->push_front(r_circ_der2_12);
+							(*it)->getRoute()->push_front(r_circ_der2_11);
+							(*it)->getRoute()->push_front(r_circ_der2_10);
+							(*it)->getRoute()->push_front(r_circ_der2_9);
+							(*it)->getRoute()->push_front(r_circ_der2_8);
+							(*it)->getRoute()->push_front(r_circ_der2_7);
+							(*it)->getRoute()->push_front(r_circ_der2_6);
+							(*it)->getRoute()->push_front(r_circ_der2_5);
+							(*it)->getRoute()->push_front(r_circ_der2_4);
+							(*it)->getRoute()->push_front(r_circ_der2_3);
+							(*it)->getRoute()->push_front(r_circ_der2_2);
+						}
 					}
 					else
 					{
-						(*it)->getRoute()->push_back(r_circ_der2_1);
-						(*it)->getRoute()->push_back(r_circ_der2_3);
-						(*it)->getRoute()->push_back(r_circ_der2_4);
-						(*it)->getRoute()->push_back(r_circ_der2_5);
-						(*it)->getRoute()->push_back(r_circ_der2_6);
-						(*it)->getRoute()->push_back(r_circ_der2_7);
-						(*it)->getRoute()->push_back(r_circ_der2_8);
-						(*it)->getRoute()->push_back(r_circ_der2_9);
-						(*it)->getRoute()->push_back(r_circ_der2_10);
-						(*it)->getRoute()->push_back(r_circ_der2_11);
-						(*it)->getRoute()->push_back(r_circ_der2_12);
+						Airport::getInstance()-> book_landing();
+						(*it)->getRoute()->push_front(r_aterr4);
+						(*it)->getRoute()->push_front(r_aterr3);
+						(*it)->getRoute()->push_front(r_aterr2);
+						(*it)->getRoute()->push_front(r_aterr_der2_2);
+						(*it)->getRoute()->push_front(r_aterr_der2_1);
 					}
-				}
-				else
-				{
-					Airport::getInstance()-> book_landing();
-					(*it)->getRoute()->push_back(r_aterr1);
-					(*it)->getRoute()->push_back(r_aterr2);
-					(*it)->getRoute()->push_back(r_aterr3);
-					(*it)->getRoute()->push_back(r_aterr4);
 				}
 			}
 		}

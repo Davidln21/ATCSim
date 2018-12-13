@@ -51,6 +51,7 @@ public:
 	Position getPosition() { return pos;};
 	float getInclination() { return inclination;};
 	float getBearing() { return bearing;};
+	float getInitBearing() { return init_bearing;}; //NEW
 	float getSpeed() { return speed;};
 	void setSpeed(float tgt_speed) {speed = checkSpeedLimits(tgt_speed);}
 	float getPoints() {return points;};
@@ -64,7 +65,7 @@ public:
 private:
 	std::string id;
 	Position pos, last_pos;
-	float bearing, inclination;
+	float bearing, init_bearing /*NEW*/, inclination;
 	float speed, w_speed;
 	std::list<Route> route;
 	bool focused;
