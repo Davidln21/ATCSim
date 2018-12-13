@@ -25,14 +25,26 @@
 #include "Position.h"
 #include <math.h>
 
+namespace atcsim{
+
 Position::Position() {
 
+	name = "";
 	x = y = z = 0.0;
 
 }
 
 Position::Position(float _x, float _y, float _z)
 {
+	name = "";
+	x = _x;
+	y = _y;
+	z = _z;
+}
+
+Position::Position(std::string _name, float _x, float _y, float _z)
+{
+	name = check_name(_name);
 	x = _x;
 	y = _y;
 	z = _z;
@@ -40,6 +52,30 @@ Position::Position(float _x, float _y, float _z)
 
 Position::~Position() {
 
+}
+
+std::string Position::check_name(std::string name)
+{
+	ushort max_length = 5;
+	std::string aux;
+	// Limit name to 5 characters
+	if(name.length() > max_length)
+	{
+		aux = name.substr(0, max_length);
+	}
+	// Fill name to 5 characters
+	else if(name.length() < max_length)
+	{
+		aux = name.substr(0, name.length());
+		for(int i=name.length(); i<max_length; i++)
+		aux += "0";
+	}
+	else
+	{
+		aux = name;
+	}
+
+	return aux;
 }
 
 float
@@ -60,3 +96,5 @@ Position::angles(Position pos, float &bearing, float &inclination)
 	bearing = atan2f(y-pos.get_y(), x-pos.get_x());
 	inclination = atan2f(pos.get_z()-z, distxy);
 }
+
+}  // namespace atcsim

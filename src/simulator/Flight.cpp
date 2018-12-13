@@ -38,6 +38,8 @@
 #include <string>
 #include <math.h>
 
+namespace atcsim{
+
 Flight::~Flight() {
 	// TODO Auto-generated destructor stub
 }
@@ -47,6 +49,7 @@ Flight::Flight(std::string _id, Position _pos, float _bearing, float _inclinatio
 	id = _id;
 	pos = _pos;
 	bearing = _bearing;
+	init_bearing = _bearing;
 	inclination = _inclination;
 	//speed = _speed;
 	setSpeed(_speed);	// Through set in order to limit speeds
@@ -128,6 +131,8 @@ Flight::update(float delta_t)
 float Flight::checkSpeedLimits(float tgt_speed){
 	return (tgt_speed > CRASH_SPEED_MAX ? CRASH_SPEED_MAX : tgt_speed);
 }
+
+};//namespace atcsim
 
 //
 //void
