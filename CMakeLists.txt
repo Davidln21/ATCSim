@@ -42,6 +42,7 @@ endif()
 set(_link_flags "-lice -liceutils")
 
 set(ATCSIM_SRCS
+  src/simulator/Sector.h src/simulator/Sector.cpp
   src/simulator/Flight.h src/simulator/Flight.cpp
   src/simulator/Storm.h src/simulator/Storm.cpp
   src/simulator/Airport.h src/simulator/Airport.cpp

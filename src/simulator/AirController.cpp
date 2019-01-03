@@ -27,6 +27,7 @@
 #include "Flight.h"
 #include "Position.h"
 #include <list>
+#include <fstream>
 
 namespace atcsim{
 
@@ -466,4 +467,4 @@ AirController::doWork()
 	}
 }
 
-};  // namespace atcsim
+}  // namespace atcsim

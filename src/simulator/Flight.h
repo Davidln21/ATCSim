@@ -21,11 +21,11 @@
  *  You should have received a copy of the GNU General Public License
  *  along with ATCSim.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include <string>
+
 
 #ifndef FLIGHT_H_
 #define FLIGHT_H_
-
+#include <string>
 #include "Position.h"
 #include "Common.h"
 #include <list>
