@@ -26,6 +26,7 @@
 #define AIRCONTROLLER_H_
 
 #include "Singleton.h"
+#include "Sector.h"
 
 namespace atcsim{
 
@@ -35,6 +36,11 @@ public:
 	virtual ~AirController();
 
 	void doWork();
+
+private:
+
+	Sector *_mySectors[6];
+	std::string *_landing = NULL;
 };
 
 };  // namespace atcsim
