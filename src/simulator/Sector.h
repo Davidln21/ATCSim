@@ -16,7 +16,7 @@ class Sector
 {
 public:
     Sector();
-    Sector(float topX, float topY, float totalX, float totalY);
+    Sector(float topX, float topY, float totalX, float totalY); 
     ~Sector();
     virtual bool isFlightInSector(Flight *aFlight);
     virtual void assignRoute(Flight *aFlight);

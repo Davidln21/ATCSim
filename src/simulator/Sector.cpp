@@ -274,7 +274,7 @@ SectorCentral::maxDistanceForAngle(float angle)
   }
 	else if (angle < 270)
   {
-		angleRad = (angle - 180);
+		angleRad = (angle - 180); 
   }
 	else
   {

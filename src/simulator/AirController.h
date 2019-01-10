@@ -40,7 +40,7 @@ public:
 private:
 
 	Sector *_mySectors[6];
-	std::string *_landing = NULL;
+	std::string *_landing = NULL; 
 };
 
 };  // namespace atcsim
