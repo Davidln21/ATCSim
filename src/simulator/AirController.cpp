@@ -46,27 +46,27 @@ AirController::AirController()
 
 	aSector = new SectorEspera(16000.0, 8000.0, 8000.0, 8000.0, ROTATION_R);
 	aSector->setExitAngle(270);
-	aSector->setMinimumHeight( 500);
+	aSector->setMinimumHeight(500);
 	aSector->setTargetPoint(6000.0, 0.0);
 	_mySectors[2] = aSector;
 
 	aSector = new SectorEspera(16000.0, 0.0, 8000.0, 8000.0, ROTATION_L);
 	aSector->setExitAngle(90);
-	aSector->setMinimumHeight( 500);
+	aSector->setMinimumHeight(500);
 	aSector->setTargetPoint(6000.0, 0.0);
 	_mySectors[3] = aSector;
 
 	aSector = new SectorEspera(8000.0, -8000.0, 8000.0, 8000.0, ROTATION_L);
 	aSector->setExitAngle(40);
-	aSector->setMinimumHeight( 500);
+	aSector->setMinimumHeight(500);
 	aSector->setTargetPoint(6400, -7900.0);
 	_mySectors[4] = aSector;
 
 	aSectorExt = new SectorExterior(20000.0, 20000.0, 20000.0, 40000.0);
-	aSectorExt->setTargetPoint(1, 15000.0, 1500.0 );
-	aSectorExt->setTargetPoint(2, 14400.0, 8000.0);
-	aSectorExt->setTargetPoint(3, 8000.0, 14400.0);
-	aSectorExt->setTargetPoint(4, 1600.0, 16000.0);
+	aSectorExt->setTargetPoint(1, 15000.0, 1500.0);
+	aSectorExt->setTargetPoint(2, 15000.0, 8000.0);
+	aSectorExt->setTargetPoint(3, 8000.0, 13500.0);
+	aSectorExt->setTargetPoint(4, 6000.0, 15500.0);
 	_mySectors[5] = aSectorExt;
 
 }
@@ -134,7 +134,7 @@ AirController::doWork()
 					}
 					break;
 				}
-			} 
+			}
 		}
 	}
 
